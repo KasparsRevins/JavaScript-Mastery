@@ -87,3 +87,20 @@ Task 5: Calculate Fibonacci Sequence
 Write a function called `fibonacci` that takes a number `n` as input and returns the first `n` numbers in the Fibonacci sequence as an array.
 
 */
+
+function fibonacci(n) {
+  fibonacciArray = [0];
+  var a = 0, b = 1, c;
+  if ( n == 0)
+    return a;
+
+  for (var i = 2; i <= n; i++) {
+    c = a + b;
+    a = b;
+    b = c;
+    fibonacciArray += " : " + b;
+    }
+  return fibonacciArray;
+}
+
+console.log(fibonacci(20));
