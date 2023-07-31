@@ -1,7 +1,15 @@
-function inputs(event){
+function inputs(event) {
     event.preventDefault();
     var userName = document.getElementById("username").value;
-    console.log(userName);
     var userPassword = document.getElementById("password").value;
-    console.log(userPassword);
+    var city = document.getElementById("city").value;
+    var gender = document.querySelector("input[name='gender']:checked").value;
+
+    myObject = {userName,userPassword,city,gender};
+
+    var myArray = [];
+
+    myArray.push(myObject);
+
+    localStorage.setItem("Input-Form",JSON.stringify(myObject));
 }
