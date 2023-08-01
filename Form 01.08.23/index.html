@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="inputs(event)">
+        Name<input type="text" id="userName">
+        Surname<input type="text" id="userSurname">
+        Password<input type="password" id="userPassword">
+
+        <select id="country">
+            <option value="">Select a Country</option>
+            <option value="france">France</option>
+            <option value="united_kingdom">United Kingdom</option>
+            <option value="germany">Germany</option>
+            <option value="italy">Italy</option>
+        </select>
+
+        Male<input type="radio" value="male" name="gender">
+        Female<input type="radio" value="female" name="gender">
+        Other<input type="radio" value="other" name="gender">
+
+        <button id="submit">Submit</button>
+    </form>
+    <script src="input.js">
+    </script> 
+
+</body>
+</html>
