@@ -6,32 +6,33 @@ function inputs(event){
     var country = document.getElementById("country").value;
     var gender = document.querySelector("input[name='gender']:checked");
 
-    if (gender != null) {
-        gender = document.querySelector("input[name='gender']:checked").value;
-    } 
-    else { 
-        alert("You must choose a gender.");
-        return false; 
-    }
-
     if (document.getElementById("userName").value == "") {
-        alert("Username must have a value.");
+        document.getElementById("paragraph").innerHTML ="Username must have a value.";
         return false;
     }
 
     if (document.getElementById("userSurname").value == "") {
-        alert("Surname must have a value.");
+        document.getElementById("paragraph").innerHTML ="Surname must have a value.";
         return false;
     }
 
     if (document.getElementById("userPassword").value == "") {
-        alert("Password must have a value.");
+        document.getElementById("paragraph").innerHTML ="Password must have a value.";
         return false;
     }
 
     if (document.getElementById("country").value == "") {
-        alert("You must choose a country.");
+        document.getElementById("paragraph").innerHTML ="You must choose a country.";
         return false;
+    }
+    
+    if (gender != null) {
+        gender = document.querySelector("input[name='gender']:checked").value;
+        document.getElementById("paragraph").innerHTML = "";
+    } 
+    else { 
+        document.getElementById("paragraph").innerHTML = "You must choose a gender.";
+        return false; 
     }
 
 
