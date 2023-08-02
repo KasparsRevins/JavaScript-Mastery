@@ -1,42 +1,68 @@
 function inputs(event){
     event.preventDefault();
-    var userName = document.getElementById("userName").value;
-    var userSurname = document.getElementById("userSurname").value;
-    var userPassword = document.getElementById("userPassword").value;
-    var country = document.getElementById("country").value;
+    var Username = document.getElementById("Username").value;
+    var Surname = document.getElementById("Surname").value;
+    var Password = document.getElementById("Password").value;
+    var Country = document.getElementById("Country").value;
     var gender = document.querySelector("input[name='gender']:checked");
 
-    if (document.getElementById("userName").value == "") {
-        document.getElementById("paragraph").innerHTML ="Username must have a value.";
-        return false;
-    }
 
-    if (document.getElementById("userSurname").value == "") {
-        document.getElementById("paragraph").innerHTML ="Surname must have a value.";
-        return false;
-    }
+    // Reusable function
+    function validateInputs(inputIds, outputId) {
+        for (var i = 0; i < inputIds.length; i++) {
+        var input = document.getElementById(inputIds[i]);
+        if (input.value == "") {
+                var output = document.getElementById(outputId);
+                output.innerHTML = "Please choose a value for " + inputIds[i] ;
+                return false;
+                }
+            }
+            return true;
+        }
 
-    if (document.getElementById("userPassword").value == "") {
-        document.getElementById("paragraph").innerHTML ="Password must have a value.";
-        return false;
-    }
-
-    if (document.getElementById("country").value == "") {
-        document.getElementById("paragraph").innerHTML ="You must choose a country.";
-        return false;
-    }
+        if (gender != null) {
+            gender = document.querySelector("input[name='gender']:checked").value;
+            document.getElementById("paragraph").innerHTML = "";
+        } 
+        else { 
+            document.getElementById("paragraph").innerHTML = "Please pick a gender";
+            return false; 
+        }
     
-    if (gender != null) {
-        gender = document.querySelector("input[name='gender']:checked").value;
-        document.getElementById("paragraph").innerHTML = "";
-    } 
-    else { 
-        document.getElementById("paragraph").innerHTML = "You must choose a gender.";
-        return false; 
-    }
+   
+    validateInputs(["Username","Surname", "Password", "Country"], "paragraph");
+    // First method
 
+    // if (document.getElementById("userName").value == "") {
+    //     document.getElementById("paragraph").innerHTML ="Username must have a value.";
+    //     return false;
+    // }
 
-    myObject = {userName,userSurname,userPassword,country,gender};
+    // if (document.getElementById("userSurname").value == "") {
+    //     document.getElementById("paragraph").innerHTML ="Surname must have a value.";
+    //     return false;
+    // }
+
+    // if (document.getElementById("userPassword").value == "") {
+    //     document.getElementById("paragraph").innerHTML ="Password must have a value.";
+    //     return false;
+    // }
+
+    // if (document.getElementById("country").value == "") {
+    //     document.getElementById("paragraph").innerHTML ="You must choose a country.";
+    //     return false;
+    // }
+    
+    // if (gender != null) {
+    //     gender = document.querySelector("input[name='gender']:checked").value;
+    //     document.getElementById("paragraph").innerHTML = "";
+    // } 
+    // else { 
+    //     document.getElementById("paragraph").innerHTML = "You must choose a gender.";
+    //     return false; 
+    // }
+    
+    myObject = {Username,Surname,Password,Country,gender};
 
     myArray = [];
 
@@ -44,3 +70,4 @@ function inputs(event){
 
     localStorage.setItem("Input-Form",JSON.stringify(myObject));
 }
+
