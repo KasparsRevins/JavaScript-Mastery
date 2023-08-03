@@ -10,22 +10,22 @@ function inputs(event){
     // Reusable function
     function validateInputs(inputIds, outputId) {
         for (var i = 0; i < inputIds.length; i++) {
-        var input = document.getElementById(inputIds[i]);
-        if (input.value == "") {
-                var output = document.getElementById(outputId);
-                output.innerHTML = "Please choose a value for " + inputIds[i] ;
-                return false;
+            var input = document.getElementById(inputIds[i]);
+            if (input.value == "") {
+                    var output = document.getElementById(outputId);
+                    output.innerHTML = "<span style='color:red'>Please choose a value for " + inputIds[i] + "</span>";
+                    return false;
+                    }
                 }
+                return true;
             }
-            return true;
-        }
 
         if (gender != null) {
             gender = document.querySelector("input[name='gender']:checked").value;
             document.getElementById("paragraph").innerHTML = "";
         } 
         else { 
-            document.getElementById("paragraph").innerHTML = "Please pick a gender";
+            document.getElementById("paragraph").innerHTML = "<span style='color:red'>Please pick a gender </span>";
             return false; 
         }
     
