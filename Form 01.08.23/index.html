@@ -8,8 +8,13 @@
 <body>
     <form onsubmit="inputs(event)">
         Name<input type="text" id="Username">
+        <p id="paragraph"></p>
+
         Surname<input type="text" id="Surname">
+        <p id="paragraph2"></p>
+
         Password<input type="password" id="Password">
+        <p id="paragraph3"></p>
 
         <select id="Country">
             <option value="">Select a Country</option>
@@ -19,13 +24,17 @@
             <option value="italy">Italy</option>
         </select>
 
+        <p id="paragraph4"></p>
+
         Male<input type="radio" value="male" name="gender">
         Female<input type="radio" value="female" name="gender">
         Other<input type="radio" value="other" name="gender">
 
+        <p id="paragraph5"></p>
+
         <button id="submit">Submit</button>
     </form>
-    <p id="paragraph"></p>
+    
     <script src="input.js">
     </script> 
 
