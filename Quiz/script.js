@@ -16,7 +16,7 @@ const questions = [
     }
   
 ];
-1
+
 function displayQuestions() {
     questions.forEach((questionObj, index) => {
         const questionDiv = document.createElement('div');
@@ -26,7 +26,7 @@ function displayQuestions() {
         questionText.textContent = `${index + 1}. ${questionObj.question} (${questionObj.marks} marks)`;
         questionDiv.appendChild(questionText);
 
-        questionObj.options.forEach((option, optionIndex) => {
+        questionObj.options.forEach((option) => {
             const optionLabel = document.createElement('label');
             const optionInput = document.createElement('input');
             optionInput.type = 'radio';
