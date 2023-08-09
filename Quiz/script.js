@@ -9,11 +9,31 @@ const questions = [
         marks: 5
     },
     {
-        question: 'Which planet is known as the Red Planet?',
-        options: ['Earth', 'Mars', 'Venus', 'Jupiter'],
-        answer: 'Mars',
+        question: 'In which country is Stonehenge in?',
+        options: ['Norway', 'Germany', 'Wales', 'United Kingdom'],
+        answer: 'United Kingdom',
         marks: 5
     }
+    ,
+    {
+        question: 'In which country is Bucharest in?',
+        options: ['Bulgaria', 'Romania', 'Turkey', 'Moldova'],
+        answer: 'Romania',
+        marks: 5
+    },
+    {
+        question: 'What language is spoken in Brazil?',
+        options: ['Brazilian', 'Spanish', 'Portuguese', 'English'],
+        answer: 'Portuguese',
+        marks: 5
+    },
+    {
+        question: 'In which country is the Colosseum located in?',
+        options: ['Italy', 'France', 'Spain', 'Malta'],
+        answer: 'Italy',
+        marks: 5
+    }
+    
   
 ];
 
