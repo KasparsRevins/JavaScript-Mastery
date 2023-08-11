@@ -1,0 +1,16 @@
+#canvas{
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+
+#canvas img{
+    width: 70px;
+    position: absolute;
+}
+
+.createdImage{
+    width: 70px;
+    position: absolute;
+}
