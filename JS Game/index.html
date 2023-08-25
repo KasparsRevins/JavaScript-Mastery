@@ -6,17 +6,16 @@
     <link rel="stylesheet" href="css/add.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="hiddenOnStartBalloons(event)">
     <div id="backgrounddiv">
         <div id="appcontainer">
             <div id="start_btn">
-                <img src=".//images/start_btn.png" onclick="toggleBalloons(event)">
+                <img id="hidebtn" src=".//images/start_btn.png" onclick="toggleBalloons(event)">
             </div>
             <div id="displayballoons"> 
-                <!-- class="hide" -->
-                <img src="../JS Game/images/balloon-0.png" class="balloonclass" alt="">
-                <img src="../JS Game/images/balloon-1.png" class="balloonclass" alt="">
-                <img src="../JS Game/images/balloon-2.png" class="balloonclass" alt="">
+                <img src="../JS Game/images/balloon-0.png" class="balloonclass balloonset" alt="">
+                <img src="../JS Game/images/balloon-1.png" class="balloonclass balloonset" alt="">
+                <img src="../JS Game/images/balloon-2.png" class="balloonclass balloonset" alt="">
             </div>
         </div>
     </div>

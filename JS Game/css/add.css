@@ -28,19 +28,17 @@
 
 #startbtn:hover {
   opacity: .7;
-
 }
 
 .hide {
-
   display: none;
 }
 
-.bloonset {
+.balloonset {
   width: 70px;
-  position: absolute;
+  /* position: absolute; */
   left: 400px;
-  height: 100px;
+  height: 80px;
 
 }
 
